@@ -1,0 +1,56 @@
+---
+---
+@import "variable";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+
+}
+
+header {
+  background: #343434;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-shadow: -1px -1px 0 #777;
+
+  h1 {
+    margin: 0;
+
+    img {
+      vertical-align: top;
+    }
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+}
+
+footer {
+  background: #121212;
+  color: #fff;
+  padding: .25rem 0;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  -webkit-flex: 1;
+
+  a {
+    color: $blue;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #ddd;
+
+    &:hover {
+      color: $green;
+      transition-duration: .25s;
+    }
+  }
+}
