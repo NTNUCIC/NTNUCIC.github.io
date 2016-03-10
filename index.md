@@ -16,7 +16,7 @@
 </ul>
 
 <script>
-  fetch('https://graph.facebook.com/575629159242410/feed?access_token=1385521591772831|lMcuWxJls6aEK-IwR0Z-_AQVMV4').then(function(response) {
+  fetch('https://graph.facebook.com/575629159242410/feed?access_token=1764433087110919|P5Iz7NORruUb8OA2M1m5Wn7_waw').then(function(response) {
     return response.json();
   }).then( (posts) => {
   console.log(posts);
