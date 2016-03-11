@@ -9,53 +9,36 @@
 - [Slides](http://ntnucic.github.io/104/)
 
 <h2 id="fb_title">
-  <a href="https://www.facebook.com/groups/ntnucic/">臺師大資訊研究社公開版</a>
+  <a href="https://www.facebook.com/ntnucic/">臺師大資訊研究社粉專</a>
 </h2>
 
 <ul id="fb_posts">
 </ul>
 
 <script>
-  fetch('https://graph.facebook.com/575629159242410/feed?access_token=1764433087110919|P5Iz7NORruUb8OA2M1m5Wn7_waw').then(function(response) {
+  fetch('https://graph.facebook.com/NTNUCIC/feed?access_token=1764433087110919|P5Iz7NORruUb8OA2M1m5Wn7_waw').then(function(response) {
     return response.json();
   }).then( (posts) => {
-  console.log(posts);
-    var content = "", msg;
+    var content = "";
     posts.data.forEach( (post) => {
       if (post.message) {
-        msg = post.message;
-        msg = msg.replace(/&/g, "&amp;")
+        var msg = post.message
+          .replace(/&/g, "&amp;")
           .replace(/</g, "&lt;")
           .replace(/>/g, "&gt;")
           .replace(/"/g, "&quot;")
           .replace(/'/g, "&#039;");
+        var post_id = post.id.split("_")[1];
+        content += `
+          <li>
+            <a href="http://facebook.com/NTNUCIC/posts/${post_id}">
+              <p>
+                <img src="/images/loud.svg" alt="" width="40" height="40">
+                ${msg}
+              </p>
+            </a>
+          </li>`;
       }
-
-      content += `
-        <li>
-          <img src="https://graph.facebook.com/${post.from.id}/picture?width=60&height=60" alt="${post.from.name}" class="avatar" />
-          <div class="user_name">${post.from.name}</div>
-          <p class="content">`;
-
-          var before = false;
-
-          if(msg) {
-            content += `<a href="https://facebook.com/${post.id} ">${msg}</a>`
-            before = true;
-          }
-          if(post.link) {
-            content += before?"<br>":"[Share]";
-            content += `<a href="${post.link}" class="link">${post.name?post.name:""}</a>`
-            before = true;
-          }
-          if(post.picture) {
-            content += before?"<br>":"";
-            content += `<img src="${post.picture}" alt="" class="share_img" />`
-          }
-
-          content += `</p>
-        </li>
-        `;
     });
     return content;
   })
