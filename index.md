@@ -16,7 +16,7 @@
 </ul>
 
 <script>
-  fetch('https://graph.facebook.com/NTNUCIC/feed?access_token=1764433087110919|P5Iz7NORruUb8OA2M1m5Wn7_waw').then(function(response) {
+  fetch('https://graph.facebook.com/NTNUCIC/feed?access_token=1767756620111473|jyBfjNiktbQfB5vjEXTTz_zCFzs').then(function(response) {
     return response.json();
   }).then( (posts) => {
     var content = "";
