@@ -6,7 +6,7 @@
 - [Facebook Group](https://www.facebook.com/groups/ntnucic)
 - [Facebook Fans Page](https://www.facebook.com/NTNUCIC)
 - [GitHub](https://github.com/ntnucic/)
-- [Slides](http://ntnucic.github.io/104/)
+- [Slides](http://www.ntnucic.club/Courses/)
 
 <h2 id="fb_title">
   <a href="https://www.facebook.com/ntnucic/">臺師大資訊研究社粉專</a>
