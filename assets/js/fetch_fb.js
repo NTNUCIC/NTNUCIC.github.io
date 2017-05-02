@@ -15,7 +15,7 @@ fetch('https://graph.facebook.com/NTNUCIC/feed?access_token=1767756620111473|jyB
         <li>
           <a href="http://facebook.com/NTNUCIC/posts/${post_id}">
             <p>
-              <img src="/images/loud.svg" alt="" width="40" height="40">
+              <img src="assets/images/loud.svg" alt="" width="40" height="40">
               ${msg}
             </p>
           </a>
