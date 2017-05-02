@@ -1,0 +1,25 @@
+{
+  "name": "ntnucic.github.io",
+  "version": "1.0.0",
+  "description": "師大資訊社官方網站",
+  "main": "index.html",
+  "scripts": {
+    "style": "scss -w style.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NTNUCIC/NTNUCIC.github.io.git"
+  },
+  "keywords": [
+    "ntnucic"
+  ],
+  "author": "ntnucic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NTNUCIC/NTNUCIC.github.io/issues"
+  },
+  "homepage": "https://github.com/NTNUCIC/NTNUCIC.github.io#readme",
+  "devDependencies": {
+    "scss": "^0.2.4"
+  }
+}
