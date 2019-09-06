@@ -1,4 +1,6 @@
-$white: #fff;
+// @import "carousel2.css";
+
+$white: #FFFFFF;
 $orange: #FF9B22;
 $blue: darken(#7DACFB, 10%);
 $green: #B9EC2D;
@@ -11,7 +13,6 @@ html, body {
   min-height: 100vh;
   flex-direction: column;
   -webkit-flex-direction: column;
-
 }
 
 header {
