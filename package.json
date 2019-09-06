@@ -4,7 +4,7 @@
   "description": "師大資訊社官方網站",
   "main": "index.html",
   "scripts": {
-    "style": "scss -w style.scss:style.css"
+    "style": "sass css/style.scss css/style.css"
   },
   "repository": {
     "type": "git",

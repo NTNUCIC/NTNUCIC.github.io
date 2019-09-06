@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+header {
+  background: #343434;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-shadow: -1px -1px 0 #777;
+}
+header h1 {
+  margin: 0;
+}
+header h1 img {
+  vertical-align: top;
+}
+header p {
+  margin: 0 0 1rem;
+}
+
+footer {
+  background: #121212;
+  color: #fff;
+  padding: 0.25rem 0;
+  text-align: center;
+}
+
+main {
+  background: #E9EAED;
+  flex: 1;
+  -webkit-flex: 1;
+  padding: 2rem;
+}
+main h2 {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccc;
+}
+main h2:before {
+  content: "#";
+  color: #888;
+  margin-right: 1rem;
+}
+main a {
+  color: #337df9;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #eee;
+}
+main a:hover {
+  color: #8ebc11;
+  transition-duration: 0.25s;
+}
+main ul {
+  background: #fff;
+  margin: 0 1.5rem;
+  padding: 1rem 2rem;
+  max-width: 80%;
+}
+
+#fb_posts {
+  background: #E9EAED;
+  list-style-type: none;
+  margin: 0 1.5rem;
+  padding: 0;
+}
+#fb_posts li {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+}
+#fb_posts li img {
+  vertical-align: bottom;
+  height: 27px;
+  width: 20px;
+  margin-right: 0.5rem;
+}
+#fb_posts li a {
+  display: inline-block;
+  color: #444;
+  text-shadow: 0 0 3px #eee;
+}
+
+/*# sourceMappingURL=style.css.map */
