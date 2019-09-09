@@ -1,0 +1,12 @@
+{
+	"photo":[{
+		"title":"Los Angeles",
+		"url":"https://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg"
+	},{
+		"title":"Chicago",
+		"url":"https://www.w3schools.com/bootstrap/la.jpg"
+	},{
+		"title":"New york",
+		"url":"https://www.w3schools.com/bootstrap/ny.jpg"
+	}]
+}
