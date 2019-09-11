@@ -4,7 +4,8 @@
   "description": "師大資訊社官方網站",
   "main": "index.html",
   "scripts": {
-    "style": "sass css/style.scss css/style.css"
+    "style": "sass css/style.scss css/style.css",
+    "update": "node generate.js"
   },
   "repository": {
     "type": "git",

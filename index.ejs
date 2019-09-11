@@ -28,30 +28,28 @@
 
   <body>
 
+
     <div class="container-fluid">
       <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-left:-5vw;margin-right:-5vw;">
       <!-- Indicators -->
         <ol class="carousel-indicators">
-          <%= Carousel.forEach( function(element, index) => { %>
-            <% if (index == 0) { %>
+          <% Carousel.forEach( function(e, i){ if (i == 0) { %>
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <% } else { %>
-            <li data-target="#myCarousel" data-slide-to="<%= index %>" class="active"></li>
+          <% } else { %>
+            <li data-target="#myCarousel" data-slide-to="<%= i %>"></li>
           <% }}); %>
         </ol>
         <!-- Wrapper for slides -->
         <div class="carousel-inner" style="height:500px;">
-          <div class="item active">
-            <img src="https://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg" alt="Los Angeles" style="width:100%;">
-          </div>
-
-          <div class="item">
-            <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Chicago" style="width:100%;">
-          </div>
-        
-          <div class="item">
-            <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="New york" style="width:100%;">
-          </div>
+          <% Carousel.forEach( function(e, i){ %><% if (i == 0) { %>
+            <div class="item active">
+              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;height: 500px">
+            </div>
+          <% } else { %>
+            <div class="item">
+              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;height: 500px">
+            </div>
+          <% }}); %>
         </div>
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -76,8 +74,9 @@
         <ul class="nav navbar-nav">
           <li><a href="#ClubIntro">社團簡介</a></li>
           <li><a href="#ClassIntro">課程介紹</a></li>
-          <li><a href="">社員</a></li>
-          <li><a href="">專案</a></li>
+          <li><a href="#Member">社員</a></li>
+          <li><a href="https://ntnucic.github.io/Courses/index.html">課程資料</a></li>
+          <li><a href="https://github.com/NTNUCIC">專案</a></li>
         </ul>
       </div>
     </div>
@@ -111,66 +110,27 @@
       </h3>
     </div>
 
+    <a name="Member"></a>
     <div class="container marketing" style="margin-top:90px;">
-      <!-- Three columns of text below the carousel -->
-      <h1>幹部</h1><br>
-        <div class="row" style="">
-        <div class="col-lg-6">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Jesse</h2>
-          <p>社長</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>袁至誠</h2>
-          <p>副社長</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-6 -->
-        </div>
+      <h1>社員</h1>
       <div class="row">
-        <div class="col-lg-1">
-        </div><!-- /.col-lg-1 -->
-        <div class="col-lg-2">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>公關</h2>
-          <p>++</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-2 -->
-        <div class="col-lg-2">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>活動</h2>
-          <p>許如萲</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-2 -->
-                  <div class="col-lg-2">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>總務</h2>
-          <p>吳映廷</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-2 -->
-        <div class="col-lg-2">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>文書</h2>
-          <p>速芷瑄</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-2 -->
-        <div class="col-lg-2">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>攝影</h2>
-          <p>楊喻文</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-2 -->
-                  <div class="col-lg-1">
-        </div><!-- /.col-lg-1 -->
-      </div><!-- /.row -->
+        <% Member.forEach( function(e, i) { %>
+          <% if (i < 2) { %>
+            <div class="col-lg-6">
+              <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
+              <h2><%= e.name %></h2>
+              <p><%= e.position %></p>
+            </div>
+          <% } else { if(i == 2) { %></div><div class="row"><% } %>
+            <div class="col-lg-2">
+              <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
+              <h2><%= e.name %></h2>
+              <p><%= e.position %></p>
+            </div>
+        <% }}); %>
+      </div>
+    </div>
 
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-<!--最新消息-->
     <div class = "container">
 
     <h2 id="fb_title">
