@@ -22,5 +22,8 @@
   "homepage": "https://github.com/NTNUCIC/NTNUCIC.github.io#readme",
   "devDependencies": {
     "scss": "^0.2.4"
+  },
+  "dependencies": {
+    "ejs": "^2.7.1"
   }
 }

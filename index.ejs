@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>師大資訊研究社</title>
+
     <link rel="icon" href="assets/images/icon.svg">
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
@@ -27,43 +25,7 @@
   </head>
 
   <body>
-
-
-    <div class="container-fluid">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-left:-5vw;margin-right:-5vw;">
-      <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <% Carousel.forEach( function(e, i){ if (i == 0) { %>
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <% } else { %>
-            <li data-target="#myCarousel" data-slide-to="<%= i %>"></li>
-          <% }}); %>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" style="height:500px;">
-          <% Carousel.forEach( function(e, i){ %><% if (i == 0) { %>
-            <div class="item active">
-              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;height: 500px">
-            </div>
-          <% } else { %>
-            <div class="item">
-              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;height: 500px">
-            </div>
-          <% }}); %>
-        </div>
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="navbar navbar-inverse" data-spy="affix" data-offset-top="497" style="height:10vh;">
+    <div class="navbar navbar-inverse" data-spy="affix" style="height:10vh;">
       <div class="navbar-header">
         <a class="navbar-brand" href="#" >
           <img src="./assets/images/icon.svg" height="25" style="display: inline-block;"/>
@@ -81,10 +43,44 @@
       </div>
     </div>
 
+    <div class="container-fluid">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-left:-5vw;margin-right:-1vw;">
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <% Carousel.forEach( function(e, i){ if (i == 0) { %>
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <% } else { %>
+            <li data-target="#myCarousel" data-slide-to="<%= i %>"></li>
+          <% }}); %>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="height:100%;">
+          <% Carousel.forEach( function(e, i){ %><% if (i == 0) { %>
+            <div class="item active">
+              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;">
+            </div>
+          <% } else { %>
+            <div class="item">
+              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;">
+            </div>
+          <% }}); %>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
     <div class="container marketing">
       <a name="ClubIntro"></a>
       <h1>社團簡介</h1>
-      <h3>
+      <h4>
         資訊研究社是一群熱愛資訊科技之人聚集的園地。<br>
         無論具有什麼樣的背景，<br>
         我們齊聚於此學習、分享與交流。<br>
@@ -94,76 +90,62 @@
         在你因新科技興奮時陪你瘋狂，<br>
         甚至在你半夜趕作業感到疲憊時告訴你大家同樣在爆肝。<br>
         資訊研究社，期待和你一起成長<br>
-      </h3>
+      </h4>
     </div>
 
     <div class="container marketing">
       <a name="ClassIntro"></a>
       <h1>課程介紹</h1>
-      <h3>
+      <h4>
         社團著重與可程式化器件進行溝通之語言的教學。<br>
         舉凡CSS、HTML、JavaScript、Scratch、Ruby、Python與組合語言都是我們的教學標的。<br>
         每學期的課程皆有不同主題，除了教導語言本身使用慣例，還會進行應用面的延伸教學，<br>
         期許社員能夠擁有實際應用的能力，真正體會編寫程式碼所能做出的影響。<br>
         資訊研究社並非以單純講述方式授課，而是透過幹部示範、社員跟著操作的方式一步步建立社員的coding基礎。<br>
         除此之外，本社團有時亦會有講座或者與他社的聯合社課，讓整體學習內容更充實、多元。<br>
-      </h3>
+      </h4>
     </div>
 
-    <a name="Member"></a>
-    <div class="container marketing" style="margin-top:90px;">
+    <div class="container marketing" style="margin-top:30px;">
+      <a name="Member"></a>
       <h1>社員</h1>
       <div class="row">
         <% Member.forEach( function(e, i) { %>
           <% if (i < 2) { %>
-            <div class="col-lg-6">
-              <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
-              <h2><%= e.name %></h2>
-              <p><%= e.position %></p>
-            </div>
+          <div class="col-lg-6">
+            <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
+            <h2><%= e.name %></h2>
+            <p><%= e.position %></p>
+          </div>
           <% } else { if(i == 2) { %></div><div class="row"><% } %>
-            <div class="col-lg-2">
-              <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
-              <h2><%= e.name %></h2>
-              <p><%= e.position %></p>
-            </div>
+          <div class="col-lg-2">
+            <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
+            <h3><%= e.name %></h3>
+            <p><%= e.position %></p>
+          </div>
         <% }}); %>
       </div>
     </div>
 
     <div class = "container">
-
-    <h2 id="fb_title">
-      <a href="https://www.facebook.com/ntnucic/">臺師大資訊研究社粉專</a>
-    </h2>
-
-    <ul id="fb_posts"></ul>
-        
-        <h2 id="section">相關連結</h2>
-    <ul>
-      <li><a href="https://www.facebook.com/groups/ntnucic">Facebook Group</a></li>
-      <li><a href="https://www.facebook.com/NTNUCIC">Facebook Fans Page</a></li>
-      <li><a href="https://github.com/ntnucic/">GitHub</a></li>
-      <li><a href="http://www.ntnucic.club/Courses/">Slides</a></li>
-    </ul>
-</div>
-        
-      <!-- FOOTER -->
-
-    </div><!-- /.container -->
-
+      <ul id="fb_posts"></ul>
+      <h2 id="section">相關連結</h2>
+      <ul>
+        <li><a href="https://www.facebook.com/groups/ntnucic">Facebook 社團</a></li>
+        <li><a href="https://www.facebook.com/NTNUCIC">Facebook 粉絲專頁</a></li>
+        <li><a href="https://github.com/ntnucic/">GitHub</a></li>
+        <li><a href="./Courses/">Slides</a></li>
+      </ul>
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>NTNUCIC &copy; 2015</p>
+        <p>NTNUCIC &copy; 2015 ~ 2019</p>
       </footer>
+    </div>
 
-
-
-
-  <script src="./assets/js/holder.min.js"></script>
+    <script src="./assets/js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
+    <script src="/assets/js/fetch_fb.js"></script>
+  </body>
 </html>
 
-<script src="/assets/js/fetch_fb.js"></script>
