@@ -57,11 +57,11 @@
         <div class="carousel-inner" style="height:100%;">
           <% Carousel.forEach( function(e, i){ %><% if (i == 0) { %>
             <div class="item active">
-              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;">
+              <img alt="<%= e.title %>" src="<%= e.url %>">
             </div>
           <% } else { %>
             <div class="item">
-              <img alt="<%= e.title %>" src="<%= e.url %>" style="width: 100%;">
+              <img alt="<%= e.title %>" src="<%= e.url %>">
             </div>
           <% }}); %>
         </div>
@@ -108,22 +108,37 @@
 
     <div class="container marketing" style="margin-top:30px;">
       <a name="Member"></a>
-      <h1>社員</h1>
+      <h1>幹部</h1>
       <div class="row">
-        <% Member.forEach( function(e, i) { %>
-          <% if (i < 2) { %>
-          <div class="col-lg-6">
-            <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
-            <h2><%= e.name %></h2>
-            <p><%= e.position %></p>
-          </div>
-          <% } else { if(i == 2) { %></div><div class="row"><% } %>
-          <div class="col-lg-2">
-            <img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140">
-            <h3><%= e.name %></h3>
-            <p><%= e.position %></p>
-          </div>
-        <% }}); %>
+      <% Staff.forEach( function(e, i) { %>
+        <% if (i != 0 && i % 3 == 0) { %>
+      </div>
+      <div class="row">
+        <% } %>
+        <div class="col-lg-4">
+          <a href="<%= e.url %>"><img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140"></a>
+          <h2><%= e.name %></h2>
+          <p><%= e.position %></p>
+        </div>
+      <% }); %>
+      </div>
+    </div>
+
+    <div class="container marketing" style="margin-top:30px;">
+      <a name="Member"></a>
+      <h1>成員</h1>
+      <div class="row">
+      <% Member.forEach( function(e, i) { %>
+        <% if (i != 0 && i % 4 == 0) { %>
+      </div>
+      <div class="row">
+        <% } %>
+        <div class="col-lg-3">
+          <a href="<%= e.url %>"><img class="img-circle" alt="<%= e.name %>" src="<%= e.img %>" width="140" height="140"></a>
+          <h2><%= e.name %></h2>
+          <p><%= e.position %></p>
+        </div>
+      <% }); %>
       </div>
     </div>
 
